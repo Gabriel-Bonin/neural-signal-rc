@@ -1,12 +1,6 @@
 # -*- coding: utf-8 -*-
 
-## Simulating a brain signal with RC circuits
-
-import numpy as np
-from matplotlib import pyplot as plt 
-from matplotlib import cm, colors
-from scipy.integrate import odeint
-from scipy.signal import square
+# simulating a brain signal with RC circuits
 
 # creating a class to simulate an axon
 
@@ -36,7 +30,7 @@ class Axon:
 
     def dV(self, V_m, V_n):
 
-        # Consider V_m == V_(N-1) and V_n == V_N
+        # consider V_m == V_(N-1) and V_n == V_N
         I2 = (V_m - V_n) / self.R2
         I1 = V_m / self.R1
 
